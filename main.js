@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
 
-
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -13,7 +12,7 @@ document.body.appendChild(renderer.domElement);
 // Loader for our scene
 const loader = new GLTFLoader();
 loader.load(
-  "./ancient_ruin.gltf",
+  "/ancient_ruin.gltf",
   function (gltf) {
     scene.add(gltf.scene);
     render()
