@@ -31,12 +31,29 @@ controls.listenToKeyEvents( window ); // optional
 
 // const light = new THREE.AmbientLight( 0x15248f ); // soft white light
 // light.intensity = 3;
-const light = new THREE.PointLight( 0x15248f, 3, 100 );
+const light = new THREE.PointLight( 0x15248f, 4, 100 );
 light.position.set( -30, 30, -30 );
 scene.add( light );
 
+const smallLight = new THREE.PointLight(0xffab3d, 3, 2 );
+smallLight.position.set(3, 1.75, 2 );
+scene.add(smallLight)
+
+const frontLight = new THREE.PointLight(0xffab3d, 2, 4);
+frontLight.position.set(5.5, 1, 5);
+scene.add(frontLight)
+
+const waterfallLight = new THREE.PointLight(0x03b3ff, 2, 5);
+waterfallLight.position.set(0, 0.75, 2);
+scene.add(waterfallLight)
+
+const piLight1 = new THREE.PointLight(0xffab3d, 2, 10);
+piLight1.position.set(-4, 3, -1);
+scene.add(piLight1)
+
 camera.position.y = 10
-camera.position.z = 15;
+camera.position.z = 10;
+camera.position.x = 5;
 camera.lookAt(new THREE.Vector3(0,0,0))
 
 function render() {
